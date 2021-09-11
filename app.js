@@ -291,6 +291,26 @@ app.post("/login", function(req, res){
 });
 
 
+app.post("/save",function(req,res){
+  const update={"name": req.body.name, "clgname": req.body.clgname, "username": req.body.username, "phn": req.body.phn, "gender":req.body.gender}
+  Student.findOneAndUpdate({_id: req.user.id},update,function(err){
+    if (err){
+      console.log(err);
+    }else{
+      res.redirect("/profile1")
+    }
+  })
+})
+
+
+app.get("/profile",function(req,res){
+  res.render("profile",{name:req.user.name, gender: req.user.gender, phn: req.user.phn, clgname: req.user.clgname, username: req.user.username});
+})
+
+app.get("/profile1",function(req,res){
+  res.render("profile1",{name:req.user.name, gender: req.user.gender, phn: req.user.phn, clgname: req.user.clgname, username: req.user.username});
+})
+
 
 
 

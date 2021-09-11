@@ -1,0 +1,57 @@
+<%- include('partials/headerbl') %>
+<div class="container mt-5">
+  <h1 class="signupHeading">Edit Profile</h1>
+
+  <div class="row siginupFORM ">
+    <div class="col-lg-8">
+      <div class="card signupCARD bg-transparent">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/save" method="POST">
+            <div class="form-group formINPUTS">
+              <label for="name">Name *</label>
+              <input type="text" class="form-control" name="name" value="<%= name %>">
+            </div>
+            <div class="form-group formINPUTS">
+              <label for="clgname">College Name *</label>
+              <input type="text" class="form-control" name="clgname" value="<%= clgname %>">
+              <!-- <input type="email" class="form-control" name=""> -->
+            </div>
+            <div class="form-group formINPUTS role" id="teacher" >
+              <label for="gender">Gender *</label>
+              <input type="text" class="form-control" name="gender" value="<%= gender %>">
+              <!-- <input type="text" class="form-control " name="subject"> -->
+            </div>
+            <div class="form-group formINPUTS role" id="student" >
+              <label for="phn">Phone Number *</label>
+              <input type="text" class="form-control " name="phn" value="<%= phn %>">
+            </div>
+
+            <div class="form-group formINPUTS">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username" value="<%= username %>">
+            </div>
+            <button type="submit " class="btn btn-dark signupSUBMITbtn">Save</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-lg-4 googleCOL">
+      <h5 class="googleCHOICE">OR SIGNUP WITH GOOGLE</h5>
+      <div class="card social-block bg-transparent googlesignupBTN">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+</div>
+
+<%- include('partials/footerbl') %>
