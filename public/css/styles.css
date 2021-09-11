@@ -1,3 +1,10 @@
+.brandHeading{
+    color:#610094 !important;
+    font-family: 'Monoton', cursive;
+  }
+ .nav-item{
+   padding: 0 1vw 0 0.5vw;
+ }
 /*******************************home***********************************************/
 .homeHeading{
   text-align: center;
@@ -63,4 +70,36 @@ font-family: 'Kanit', sans-serif;
 .dropBTN:hover{
   background-color:#610094;
   border-radius: 2px solid yellow;
+}
+/***********************************************************signup***************************************************************/
+.signupHeading{
+  padding-top: 5vh;
+  font-family: 'Monda', sans-serif;
+  color:#610094;
+  text-transform: uppercase;
+}
+.signupSUBMITbtn{
+  margin-top: 2vh;
+  background-color:#610094;
+}
+.googleCOL{
+  border-left: 3px solid #610094;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.googleCHOICE{
+  color:#610094;
+  font-family: 'Monda', sans-serif;
+}
+.googlesignupBTN{
+  background-color: red;
+}
+.googlesignupBTN a{
+  padding: 0;
+    color: white !important;
+}
+.signupCARD{
+  border: none !important;
 }
