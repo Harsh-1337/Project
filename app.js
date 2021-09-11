@@ -140,7 +140,7 @@ app.get("/landing", function(req, res){
 //passport has isAuthenticate() through which we can check wether user is logged in or not
 app.get("/home", function(req, res){
   if (req.isAuthenticated()){
-  res.render("home");
+  res.render("home",{name: req.user.name});
 } else {
   res.redirect("/landing");
 }
