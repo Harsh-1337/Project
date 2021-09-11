@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><%= coursename %></h1>
+    <h1>Description</h1>
+    <p><%= desc %></p>
+    <h2>Purchased By:-</h2>
+    <ul>
+      <% studs.forEach(stud=>{ %>
+        <li><%= stud.studname %></li>
+      <% }) %>
+    </ul>
+    <form class="" action="/purchase" method="post">
+      <button type="submit" name="purchase" value="<%= coursename %>">Purchase</button>
+    </form>
+  </body>
+</html>
