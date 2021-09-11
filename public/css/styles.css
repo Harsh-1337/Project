@@ -1,0 +1,66 @@
+/*******************************home***********************************************/
+.homeHeading{
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: uppercase;
+  color:#610094;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.col{
+  padding-top: 1vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.courseCards{
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5vw;
+  box-shadow: 10px 10px 5px grey;
+  transition: all 0.3s ease-out;
+  margin-bottom: 2vw;
+}
+.courseCards:hover{
+  transform: translateY(-8px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11);
+
+  box-shadow: 10px 10px 5px grey;
+}
+
+.courseCards h5 {
+font-family: 'Kanit', sans-serif;
+color:#610094;
+}
+
+.CourseBTN{
+font-family: 'Kanit', sans-serif;
+  border: 3px solid white;
+}
+.CourseBTN:hover{
+  background-color:#610094;
+  border: 3px solid yellow;
+}
+.subjectIMG{
+  padding-top: 0;
+  margin-top: 0;
+  border-top-left-radius:8%;
+  border-top-right-radius:8%;
+  width: 100.5%;
+}
+.subjectsROW{
+  padding-left: 1vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.dropBTN{
+  background-color:#5C33F6;
+}
+.dropBTN:hover{
+  background-color:#610094;
+  border-radius: 2px solid yellow;
+}

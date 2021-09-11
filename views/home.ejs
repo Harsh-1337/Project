@@ -1,62 +1,63 @@
 <%-include('partials/header') %>
 
-<h1 class="dasboardHeading ">Dashboard</h1>
+<h1 class="homeHeading ">Courses</h1>
+<div class="container-fluid">
 <div class="row subjectsROW bg-transparent">
   <div class="col ">
-    <div class="card subjectCards" style="width: 22rem;">
-      <img class="subjectIMG" src="images/english.png" alt="">
+    <div class="card courseCards" style="width: 15rem;">
+      <img class="subjectIMG" src="images/Layer 1.jpg" alt="">
       <div class="card-body">
-        <h5 class="card-title">English</h5>
+        <h5 class="card-title">DSA</h5>
                 <form method="post" action="/subject">
-          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary btn btn-primary slide_left viewBTN" value="English" name="sub">View</button></a>
+          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary btn btn-primary slide_left CourseBTN" value="English" name="sub">Buy This Course</button></a>
         </form>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card subjectCards" style="width: 22rem;">
-      <img class="subjectIMG" src="images/compscience.png" alt="">
+    <div class="card  courseCards" style="width: 15rem;">
+      <img class="subjectIMG" src="images/ML.jpg" alt="">
       <div class="card-body">
-        <h5 class="card-title">Computer Science</h5>
+        <h5 class="card-title">Machine Learning</h5>
         <form method="post" action="/subject">
-          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left viewBTN" value="Computer Science" name="sub">View</button></a>
+          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left CourseBTN" value="Computer Science" name="sub">Buy This Course</button></a>
         </form>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card subjectCards" style="width: 22rem; ">
-      <img class="subjectIMG" src="images/chem.png" alt="">
+    <div class="card courseCards" style="width: 15rem; ">
+      <img class="subjectIMG" src="images/WEBD.png" alt="">
       <div class="card-body">
-        <h5 class="card-title">Chemistry</h5>
+        <h5 class="card-title">Web Devlopment</h5>
         <form method="post" action="/subject">
-          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left viewBTN" value="Chemistry" name="sub">View</button></a>
+          <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left CourseBTN" value="Chemistry" name="sub">Buy This Course</button></a>
         </form>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card subjectCards" style="width: 22rem;">
-      <img class="subjectIMG" src="images/physics.png" alt="">
+    <div class="card courseCards" style="width: 15rem;">
+      <img class="subjectIMG" src="images/Layer 3.jpg" alt="">
       <div class="card-body">
-        <h5 class="card-title">Physics</h5>
+        <h5 class="card-title">App Devlopment</h5>
         <form method="post" action="/subject">
-        <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left viewBTN" value="Physics" name="sub">View</button></a>
+        <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left CourseBTN" value="Physics" name="sub">Buy This Course</button></a>
         </form>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card subjectCards" style="width: 22rem;">
-      <img class="subjectIMG" src="images/maths.png" alt="">
+    <div class="card courseCards" style="width: 15rem;">
+      <img class="subjectIMG" src="images/CLOUD.jpg" alt="">
       <div class="card-body">
-        <h5 class="card-title">Mathematics</h5>
+        <h5 class="card-title">Cloud</h5>
         <form method="post" action="/subject">
-        <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left viewBTN" value="Mathematics" name="sub">View</button></a>
+        <a href="./dashboard" class="card-link"><button type="submit" class="btn btn-primary slide_left CourseBTN" value="Mathematics" name="sub">Buy This Course</button></a>
         </form>
       </div>
     </div>
   </div>
 </div>
-
+</div>
 <%- include('partials/footer') %>
