@@ -117,7 +117,10 @@ app.get("/logout", function(req, res){
 
 app.post("/signup", function(req, res){
 
-  Student.register({username: req.body.username}, req.body.password, function(err, student){
+  Student.register({
+    name: req.body.name,
+    username: req.body.username,
+  }, req.body.password, function(err, student){
     if (err) {
       console.log(err);
       res.redirect("/signup");
