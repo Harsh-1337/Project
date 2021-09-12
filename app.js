@@ -140,7 +140,7 @@ app.get("/landing", function(req, res){
 //passport has isAuthenticate() through which we can check wether user is logged in or not
 app.get("/home", function(req, res){
   if (req.isAuthenticated()){
-  res.render("home");
+  res.render("home",{name: req.user.name});
 } else {
   res.redirect("/landing");
 }
@@ -182,7 +182,7 @@ app.post("/dsa",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })
@@ -290,6 +290,26 @@ app.post("/login", function(req, res){
 
 });
 
+
+app.post("/save",function(req,res){
+  const update={"name": req.body.name, "clgname": req.body.clgname, "username": req.body.username, "phn": req.body.phn, "gender":req.body.gender}
+  Student.findOneAndUpdate({_id: req.user.id},update,function(err){
+    if (err){
+      console.log(err);
+    }else{
+      res.redirect("/profile1")
+    }
+  })
+})
+
+
+app.get("/profile",function(req,res){
+  res.render("profile",{name:req.user.name, gender: req.user.gender, phn: req.user.phn, clgname: req.user.clgname, username: req.user.username});
+})
+
+app.get("/profile1",function(req,res){
+  res.render("profile1",{name:req.user.name, gender: req.user.gender, phn: req.user.phn, clgname: req.user.clgname, username: req.user.username});
+})
 
 
 
