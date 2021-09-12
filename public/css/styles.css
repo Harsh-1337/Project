@@ -103,3 +103,40 @@ font-family: 'Kanit', sans-serif;
 .signupCARD{
   border: none !important;
 }
+/***********************************************************Course***************************************************************/
+.courseName{
+  padding-top: 5vh;
+  font-family: 'Monda', sans-serif;
+  color:#610094;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.aboutCourse{
+    font-family: 'Monda', sans-serif;
+  color:#610094;
+}
+.des{
+  text-align: left;
+  color: #AAAAAA;
+}
+.purchase{
+  font-family: 'Monda', sans-serif;
+  color:#610094;
+    font-weight: 400;
+}
+.nameList{
+  font-family: 'Kanit', sans-serif;
+  color: #FF7A00;
+  text-transform: uppercase;
+}
+.purchaseBTN{
+  font-family: 'Kanit', sans-serif;
+  background-color: #C400FF;
+  color: white;
+  border: 3px solid white;
+}
+.purchaseBTN:hover{
+  border: 3px solid yellow;
+}
