@@ -1,14 +1,14 @@
 <%- include('partials/headerbl') %>
-<div class="container mt-5">
+<div class="container mt-5 siginupCONTAINER">
   <h1 class="signupHeading">Register</h1>
 
   <div class="row siginupFORM ">
     <div class="col-lg-8">
       <div class="card signupCARD bg-transparent">
-        <div class="card-body">
+        <div class="card-body ">
 
           <!-- Makes POST request to /register route -->
-          <form action="/signup" method="POST">
+          <form action="/signup" class="" method="POST">
             <div class="form-group formINPUTS">
               <label for="name">Name *</label>
               <input type="text" class="form-control" name="name" >
@@ -43,15 +43,19 @@
       </div>
     </div>
     <div class="col-lg-4 googleCOL">
-      <h5 class="googleCHOICE">OR SIGNUP WITH GOOGLE</h5>
-      <div class="card social-block bg-transparent googlesignupBTN">
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign Up with Google
-          </a>
+      <div class="container-fluid">
+          <h5 class="googleCHOICE">OR SIGNUP WITH GOOGLE</h5>
+        <div class="card social-block googlesignupBTN">
+          <div class="card-body">
+            <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+              <i class="fab fa-google"></i>
+              Sign Up with Google
+            </a>
+          </div>
         </div>
       </div>
+
+
     </div>
 
 

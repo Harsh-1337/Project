@@ -193,7 +193,7 @@ app.post("/dsa",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })
@@ -214,7 +214,7 @@ app.post("/ML",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })
@@ -228,7 +228,7 @@ app.post("/webd",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })
@@ -243,7 +243,7 @@ app.post("/appd",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })
@@ -258,7 +258,7 @@ app.post("/cloud",function(req,res){
       console.log(err);
       console.log(students);
     }else{
-      res.render("course",{coursename: req.body.sub, desc: desc, studs: students[0].students});
+      res.render("course",{name: req.user.name,coursename: req.body.sub, desc: desc, studs: students[0].students});
     }
 
   })

@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1><%= coursename %></h1>
-    <h1>Description</h1>
-    <p><%= desc %></p>
-    <h2>Purchased By:-</h2>
-    <ul>
-      <% studs.forEach(stud=>{ %>
-        <li><%= stud.studname %></li>
-      <% }) %>
-    </ul>
-    <form class="" action="/purchase" method="post">
-      <button type="submit" name="purchase" value="<%= coursename %>">Purchase</button>
-    </form>
-  </body>
-</html>
+<%- include('partials/header') %>
+
+    <div class="container">
+      <h1 class="courseName"><%= coursename %></h1>
+      <h1 class="aboutCourse">About</h1>
+      <p class="des"><%= desc %></p>
+      <h2 class="purchase">Purchased By:-</h2>
+      <ul>
+        <% studs.forEach(stud=>{ %>
+          <li class="nameList"><%= stud.studname %></li>
+        <% }) %>
+      </ul>
+      <form class="" action="/purchase" method="post">
+        <button type="submit" class="purchaseBTN" name="purchase" value="<%= coursename %>">Purchase</button>
+      </form>
+    </div>
+
+
+
+<%- include('partials/footerbl') %>
