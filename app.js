@@ -80,7 +80,7 @@ passport.use(new GoogleStrategy({
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
 
-    Student.findOrCreate({ googleId: profile.id }, function (err, student) {
+    Student.findOrCreate({ username: profile.emails[0].value, googleId: profile.id }, function (err, student) {
       return cb(err, student);
     });
   }
@@ -116,14 +116,25 @@ app.get("/", function(req, res){
 });
 
 app.get("/auth/google",
-  passport.authenticate('google', { scope: ["profile"] })
+  passport.authenticate('google', { scope: ["profile","email"] })
 );
 
 app.get("/auth/google/home",
   passport.authenticate('google', { failureRedirect: "/login" }),
-  function(req, res) {
+  async function(req, res) {
+    try {
 
-    res.redirect("/home");
+      if (!req.user.name) {
+        res.redirect("/gdata");
+      } else {
+        res.redirect("/home");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  // function(req, res) {
+  //
+  //   res.redirect("/home");
   });
 
 app.get("/login", function(req, res){
@@ -312,8 +323,34 @@ app.get("/profile1",function(req,res){
 })
 
 
+app.get("/gdata",function(req,res){
+  res.render("gdata");
+})
+
+// app.post("/gdata",function(req,res){
+//
+// })
 
 
+app.post("/gdata", function(req, res) {
+      Student.updateOne({
+        _id: req.user.id
+      }, {
+        $set: {
+          "name": req.body.name,
+          "gender": req.body.gender,
+          "phn": req.body.phn,
+          "clgname": req.body.clgname,
+          "username": req.user.username
+        }
+      }).catch(
+        error => {
+          console.log(error);
+        }
+
+      );
+      res.redirect("/home");
+    });
 
 
 app.listen(process.env.PORT || 3000, function() {
